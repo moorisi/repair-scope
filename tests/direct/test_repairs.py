@@ -300,6 +300,9 @@ def test_query_capacity_and_repeat_semantics(direct_deploy, direct_vm):
     assert len(before['answers']) == 16 and all(a == before['answers'][0] for a in before['answers'])
     with direct_vm.expect_revert('Query capacity reached'): c.query(QUERIES[0])
     assert c.get_state() == before
+    assert c.evaluate(QUERIES[0]) == before['answers'][0]
+    assert c.evaluate(QUERIES[2])['status'] == 'IMPOSSIBLE'
+    assert c.get_state() == before
 
 
 @pytest.mark.parametrize('kwargs', [

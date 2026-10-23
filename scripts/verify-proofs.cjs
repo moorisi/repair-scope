@@ -31,7 +31,7 @@ async function main(){
   }
   assert(equal(previous,load(id+'-final-state')),'Exact final repair database and query journal');
   if(!offline){assert(code.equals(Buffer.from(await rpc('gen_getContractCode',[d.contract]),'base64')),'Fresh live source');assert(equal(previous,await read(id+'-fresh-final',['call',d.contract,'get_state'])),'Fresh complete repair and query state');}
-  summary.instances.push({id,contract:d.contract,database:previous.database,answers:previous.answers});
+  if(!offline)for(const [i,answer] of previous.answers.entries()){const evaluated=await read(id+'-fresh-evaluate-'+i,['call',d.contract,'evaluate','--args',JSON.stringify(answer.atoms)]);assert(equal(evaluated,answer),'Fresh permissionless evaluation matches persisted answer');}summary.instances.push({id,contract:d.contract,database:previous.database,answers:previous.answers});
  }
  const expectedCount=suite.reduce((total,d)=>total+1+plan(d.id,d.accounts,revision).length,0);
  assert(hashes.size===expectedCount&&Object.keys(journal.hashes).length===expectedCount&&(selected!=='all'||expectedCount===24),'Exactly the planned receipt set');summary.transaction_calldata_checked=true;summary.rejection_bytes_checked=true;

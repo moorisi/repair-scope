@@ -12,7 +12,7 @@ Each query is an existential conjunction of one to three triple patterns. Consta
 
 A query may be CERTAIN even if no individual fact is certain: alternative custodians can all place an asset at the same site. Evaluating only the intersection of repairs would lose this answer. Multi-atom joins retain within-repair correlations.
 
-Limits: ten source rows / distinct facts, at most 1,024 candidate subsets, three atoms, six typed variables, sixteen stored queries. Empty known database has one empty repair; every nonempty conjunctive query is IMPOSSIBLE. No arbitrary user code, floats, external payments, certificate consumption, owner proposals or mutable graph.
+Limits: ten source rows / distinct facts, at most 1,024 candidate subsets, three atoms, six typed variables, sixteen stored query receipts. The permissionless evaluate view remains available after the append-only journal fills; strangers can consume journal slots but cannot block evaluation. Empty known database has one empty repair; every nonempty conjunctive query is IMPOSSIBLE. No arbitrary user code, floats, external payments, certificate consumption, owner proposals or mutable graph.
 
 Validators re-fetch exact bytes, verify SHA-256 and the complete roster/schema, independently extract every status and named field, compare all consequential fields exactly, and audit the leader's quotes against full texts. Quotes may differ; substantive decisions cannot. A malformed model answer gets one repair attempt then fails; validators never agree on model failure.
 

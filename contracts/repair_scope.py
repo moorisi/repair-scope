@@ -279,8 +279,8 @@ class RepairScope(gl.Contract):
         self.assessment = json.dumps(agreed, sort_keys=True)
         self.database = json.dumps(repair_database(agreed['observations']['rows']), sort_keys=True)
 
-    @gl.public.write
-    def query(self, atoms: list[list[str]]) -> None:
+    @gl.public.view
+    def evaluate(self, atoms: list[list[str]]) -> dict:
         if not self.database:
             fail('[EXPECTED] Snapshot not compiled')
         database = json.loads(self.database)
@@ -288,9 +288,14 @@ class RepairScope(gl.Contract):
             fail('[EXPECTED] Snapshot requires review')
         if not valid_query(atoms, json.loads(self.configuration)):
             fail('[EXPECTED] Invalid bounded conjunctive query')
+        return answer_query(database, atoms)
+
+    @gl.public.write
+    def query(self, atoms: list[list[str]]) -> None:
+        result = self.evaluate(atoms)
         if len(self.answers) >= 16:
             fail('[EXPECTED] Query capacity reached')
-        self.answers.append(json.dumps(answer_query(database, atoms), sort_keys=True))
+        self.answers.append(json.dumps(result, sort_keys=True))
 
     @gl.public.view
     def get_state(self) -> dict:
