@@ -1,0 +1,103 @@
+{
+  "answers": [],
+  "assessment": {
+    "observations": {
+      "rows": [
+        {
+          "asset": "asset-amber",
+          "holder": "holder-red",
+          "id": "record-1",
+          "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+          "site": "site-north",
+          "status": "ASSERTED"
+        },
+        {
+          "asset": "asset-bronze",
+          "holder": "holder-blue",
+          "id": "record-2",
+          "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+          "site": "site-south",
+          "status": "ASSERTED"
+        },
+        {
+          "asset": "",
+          "holder": "",
+          "id": "record-3",
+          "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+          "site": "",
+          "status": "UNKNOWN"
+        }
+      ]
+    },
+    "source": {
+      "records": [
+        {
+          "id": "record-1",
+          "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+        },
+        {
+          "id": "record-2",
+          "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+        },
+        {
+          "id": "record-3",
+          "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+        }
+      ],
+      "snapshot": "unresolved-snapshot"
+    }
+  },
+  "configuration": {
+    "assets": [
+      "asset-amber",
+      "asset-bronze",
+      "asset-copper"
+    ],
+    "holders": [
+      "holder-red",
+      "holder-blue"
+    ],
+    "records": [
+      "record-1",
+      "record-2",
+      "record-3"
+    ],
+    "repository": "moorisi/repair-scope",
+    "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+    "sites": [
+      "site-north",
+      "site-south"
+    ],
+    "snapshot": "unresolved-snapshot",
+    "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+  },
+  "database": {
+    "certain_facts": [],
+    "facts": [
+      [
+        "asset-amber",
+        "holder-red",
+        "site-north"
+      ],
+      [
+        "asset-bronze",
+        "holder-blue",
+        "site-south"
+      ]
+    ],
+    "maximum_size": -1,
+    "origins": [
+      [
+        "record-1"
+      ],
+      [
+        "record-2"
+      ]
+    ],
+    "repairs": [],
+    "status": "REVIEW",
+    "unknown": [
+      "record-3"
+    ]
+  }
+}

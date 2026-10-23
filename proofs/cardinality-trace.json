@@ -1,0 +1,2658 @@
+[
+  {
+    "label": "cardinality-reject-before-compile",
+    "caller": 1,
+    "method": "query",
+    "args": [
+      [
+        [
+          "asset-amber",
+          "holder-red",
+          "?s"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Snapshot not compiled",
+    "transaction": "0x5092cc27167a295a6a340596c6a83b1481111c20dedecfd226ce657795ff0c67",
+    "state_before": {
+      "answers": [],
+      "assessment": null,
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": null
+    },
+    "state": {
+      "answers": [],
+      "assessment": null,
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": null
+    }
+  },
+  {
+    "label": "cardinality-compile",
+    "caller": 2,
+    "method": "compile",
+    "args": [],
+    "transaction": "0xaef459f2255067a2e139b632acbb67d4360b7277098f5378b8cf80041340dc0c",
+    "state_before": {
+      "answers": [],
+      "assessment": null,
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": null
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    }
+  },
+  {
+    "label": "cardinality-query-1",
+    "caller": 1,
+    "method": "query",
+    "args": [
+      [
+        [
+          "asset-amber",
+          "holder-red",
+          "?s"
+        ]
+      ]
+    ],
+    "transaction": "0x95fa0d6c71a7ef29bad59acda25dd515e8a7708dd45e6ad096359f7174dc63b5",
+    "state_before": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    },
+    "state": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    }
+  },
+  {
+    "label": "cardinality-query-2",
+    "caller": 2,
+    "method": "query",
+    "args": [
+      [
+        [
+          "asset-bronze",
+          "holder-red",
+          "site-north"
+        ],
+        [
+          "asset-copper",
+          "holder-red",
+          "site-north"
+        ]
+      ]
+    ],
+    "transaction": "0x0f91883069cd5196f00494ee4092d422fa01852fa2bc4a7f7d75553c3a305667",
+    "state_before": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    },
+    "state": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    }
+  },
+  {
+    "label": "cardinality-query-3",
+    "caller": 3,
+    "method": "query",
+    "args": [
+      [
+        [
+          "?a",
+          "?h",
+          "site-south"
+        ]
+      ]
+    ],
+    "transaction": "0x41dda24a51becef88c4affd47259ab1ccf7cc6d0f5c46272b1d6999fba7c7277",
+    "state_before": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    },
+    "state": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?a": "asset-amber",
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    }
+  },
+  {
+    "label": "cardinality-reject-repeat-compile",
+    "caller": 0,
+    "method": "compile",
+    "args": [],
+    "error": "[EXPECTED] Snapshot already compiled",
+    "transaction": "0x4c9588d5c2edb4f31efdd1d776d91c9b7172b5d169016d03b23b624fe0513a27",
+    "state_before": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?a": "asset-amber",
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    },
+    "state": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?a": "asset-amber",
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    }
+  },
+  {
+    "label": "cardinality-reject-invalid-query",
+    "caller": 3,
+    "method": "query",
+    "args": [
+      [
+        [
+          "?x",
+          "?x",
+          "site-north"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Invalid bounded conjunctive query",
+    "transaction": "0x0070d449c3527479f9bc95314862cbc79f2344209d145408cda361448b72e023",
+    "state_before": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?a": "asset-amber",
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    },
+    "state": {
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?a": "asset-amber",
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot assertion records Amber in Red's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-2",
+              "quote": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-copper",
+              "holder": "holder-red",
+              "id": "record-3",
+              "quote": "Copper's snapshot custodian was Red; its custody location was the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-amber",
+              "holder": "holder-blue",
+              "id": "record-4",
+              "quote": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-red",
+              "id": "record-5",
+              "quote": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-6",
+              "quote": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim.",
+              "site": "",
+              "status": "OMIT"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-7",
+              "quote": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot.",
+              "site": "",
+              "status": "OMIT"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+            },
+            {
+              "id": "record-4",
+              "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+            },
+            {
+              "id": "record-5",
+              "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+            },
+            {
+              "id": "record-6",
+              "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+            },
+            {
+              "id": "record-7",
+              "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+            }
+          ],
+          "snapshot": "cardinality-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3",
+          "record-4",
+          "record-5",
+          "record-6",
+          "record-7"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "cardinality-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json"
+      },
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      }
+    }
+  }
+]

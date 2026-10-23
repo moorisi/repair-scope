@@ -1,0 +1,248 @@
+{
+  "scope": "cardinality",
+  "mode": "fresh-rpc-and-state",
+  "verified_at": "2026-10-23T11:26:24.026Z",
+  "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+  "instances": [
+    {
+      "id": "cardinality",
+      "contract": "0x13cFc89dA81DC157d813f7A3ADF7b7220daf7E08",
+      "database": {
+        "certain_facts": [
+          0,
+          2,
+          3
+        ],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-south"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-south"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-copper",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 3,
+        "origins": [
+          [
+            "record-4"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-2",
+            "record-5"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      },
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "holder-red",
+              "?s"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 1,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        },
+        {
+          "atoms": [
+            [
+              "asset-bronze",
+              "holder-red",
+              "site-north"
+            ],
+            [
+              "asset-copper",
+              "holder-red",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {},
+              "facts": [
+                2,
+                3
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 1,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?a": "asset-amber",
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "label": "cardinality-deployment",
+      "hash": "0xa018c8383cbbc1a400abc8b8b70217308790a7301883d5dfc5fb4264e102167b",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-reject-before-compile",
+      "hash": "0x5092cc27167a295a6a340596c6a83b1481111c20dedecfd226ce657795ff0c67",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-compile",
+      "hash": "0xaef459f2255067a2e139b632acbb67d4360b7277098f5378b8cf80041340dc0c",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-query-1",
+      "hash": "0x95fa0d6c71a7ef29bad59acda25dd515e8a7708dd45e6ad096359f7174dc63b5",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-query-2",
+      "hash": "0x0f91883069cd5196f00494ee4092d422fa01852fa2bc4a7f7d75553c3a305667",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-query-3",
+      "hash": "0x41dda24a51becef88c4affd47259ab1ccf7cc6d0f5c46272b1d6999fba7c7277",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-reject-repeat-compile",
+      "hash": "0x4c9588d5c2edb4f31efdd1d776d91c9b7172b5d169016d03b23b624fe0513a27",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "cardinality-reject-invalid-query",
+      "hash": "0x0070d449c3527479f9bc95314862cbc79f2344209d145408cda361448b72e023",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    }
+  ],
+  "transaction_calldata_checked": true,
+  "rejection_bytes_checked": true,
+  "live_state_match": true
+}

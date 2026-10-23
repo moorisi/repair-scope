@@ -1,0 +1,28 @@
+{
+  "repository": "moorisi/repair-scope",
+  "network": "studionet",
+  "chain_id": 61999,
+  "runs": [
+    {
+      "scenario": "correlation",
+      "workflow_run": "39945021811",
+      "url": "https://github.com/moorisi/repair-scope/actions/runs/39945021811",
+      "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+      "fixture_revision": "b551cd83c7e549b6d2b3fd714c48f94d17b196a7"
+    },
+    {
+      "scenario": "cardinality",
+      "workflow_run": "39945035609",
+      "url": "https://github.com/moorisi/repair-scope/actions/runs/39945035609",
+      "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+      "fixture_revision": "b551cd83c7e549b6d2b3fd714c48f94d17b196a7"
+    },
+    {
+      "scenario": "unresolved",
+      "workflow_run": "39945043643",
+      "url": "https://github.com/moorisi/repair-scope/actions/runs/39945043643",
+      "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+      "fixture_revision": "b551cd83c7e549b6d2b3fd714c48f94d17b196a7"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "scope": "correlation",
+  "mode": "fresh-rpc-and-state",
+  "verified_at": "2026-10-23T11:27:13.928Z",
+  "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+  "instances": [
+    {
+      "id": "correlation",
+      "contract": "0x5661ABdb46ceB9601c1a4b371990F4f0cB990F91",
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-blue",
+            "site-north"
+          ],
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-red",
+            "site-north"
+          ]
+        ],
+        "maximum_size": 2,
+        "origins": [
+          [
+            "record-2"
+          ],
+          [
+            "record-1"
+          ],
+          [
+            "record-4"
+          ],
+          [
+            "record-3"
+          ]
+        ],
+        "repairs": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "status": "READY",
+        "unknown": []
+      },
+      "answers": [
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "?h",
+              "site-north"
+            ]
+          ],
+          "counterexample": null,
+          "repair_count": 4,
+          "status": "CERTAIN",
+          "true_repairs": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "asset-amber",
+              "?h",
+              "site-north"
+            ],
+            [
+              "asset-bronze",
+              "?h",
+              "site-north"
+            ]
+          ],
+          "counterexample": 1,
+          "repair_count": 4,
+          "status": "POSSIBLE",
+          "true_repairs": [
+            0,
+            3
+          ],
+          "witness": {
+            "assignment": {
+              "bindings": {
+                "?h": "holder-blue"
+              },
+              "facts": [
+                0,
+                2
+              ]
+            },
+            "repair": 0
+          }
+        },
+        {
+          "atoms": [
+            [
+              "?a",
+              "?h",
+              "site-south"
+            ]
+          ],
+          "counterexample": 0,
+          "repair_count": 4,
+          "status": "IMPOSSIBLE",
+          "true_repairs": [],
+          "witness": null
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "label": "correlation-deployment",
+      "hash": "0xc8253dfb250f8d952a713eb4dc4e254c57537a7f50821363e41f81c73cdb0f3a",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-reject-before-compile",
+      "hash": "0x54920d86dad9bc66801c8de1fadb863e13433765f1419270bd10f55aa56771f4",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-compile",
+      "hash": "0x86aa9e48d66218487e698afd48a99f7df919201168e0018d57e05868518a6d05",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 2,
+      "idle": 0,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-query-1",
+      "hash": "0x76e969e5a1f7b8e7ad5fea0f54f3f65277fe774043550533f4c456b7671a44f5",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-query-2",
+      "hash": "0xf79b20a76e6871ab8369cf922ae38a44a655b0b1d343febf1cd3c5937426be76",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-query-3",
+      "hash": "0xf9d2c0b05760b4004c9830c21d41cd5bc960f29ca6035854c83c1bb5ef96f952",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 4,
+      "disagree": 0,
+      "idle": 1,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-reject-repeat-compile",
+      "hash": "0xaea46b05fd16829c73885330c13e05b4a3a3dff0fe1950398eb521f25db02375",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "correlation-reject-invalid-query",
+      "hash": "0xfe4cb1d8fefc7eb7f3628c6a3a4711efe40167ebb11f93957a35369d2052fd7b",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    }
+  ],
+  "transaction_calldata_checked": true,
+  "rejection_bytes_checked": true,
+  "live_state_match": true
+}

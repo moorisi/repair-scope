@@ -1,0 +1,151 @@
+{
+  "scope": "unresolved",
+  "mode": "fresh-rpc-and-state",
+  "verified_at": "2026-10-23T11:27:28.486Z",
+  "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+  "instances": [
+    {
+      "id": "unresolved",
+      "contract": "0x1797DDaa393F1ABa72c2230A74c9c35FC0881BDD",
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      },
+      "answers": []
+    }
+  ],
+  "transactions": [
+    {
+      "label": "unresolved-deployment",
+      "hash": "0x8cc091fbf93543a1bb6796500b65f498fc6475d7c62c5f838ae2673b8c78be43",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-reject-before-compile",
+      "hash": "0x2d7cc4384afc92debf341fb80a00ba7754904cff908ed2907e795fa6316d0664",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-compile",
+      "hash": "0x2aafa282145fad48a864b5d3351a61673d2ce2e85c780172c5ab34614bd79e59",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-query-1",
+      "hash": "0xc7ff267a362adb375f0df8dbfa1163a7c146d9e84de03ed3496f4762ba3b563f",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-query-2",
+      "hash": "0x62acf815792929a8bd312483f923a9355316136aafa5f1af11d3e75dc536db90",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-query-3",
+      "hash": "0x1b4d4c6fd8530199fdfae45ba4cb01ab870027a9c12578e4b40c37f076f15163",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-reject-repeat-compile",
+      "hash": "0x62ac26038db1deb96f499b7f2a45a02705bc23b0e3ee517d083e273b7093009a",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    },
+    {
+      "label": "unresolved-reject-invalid-query",
+      "hash": "0xcf9e5d0ce6b7e00d84374bbb58e9fbf9bb8c7640e3572c23660029bc9d689271",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2,
+      "recorded_voters": 5,
+      "rotation_count": 0,
+      "round_count": "1"
+    }
+  ],
+  "transaction_calldata_checked": true,
+  "rejection_bytes_checked": true,
+  "live_state_match": true
+}

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "correlation",
+    "args": [
+      "moorisi/repair-scope",
+      "correlation-snapshot",
+      [
+        "asset-amber",
+        "asset-bronze",
+        "asset-copper"
+      ],
+      [
+        "holder-red",
+        "holder-blue"
+      ],
+      [
+        "site-north",
+        "site-south"
+      ],
+      [
+        "record-1",
+        "record-2",
+        "record-3",
+        "record-4"
+      ],
+      "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/correlation.json",
+      "5a32513ec9e1873ae34e26a4fffec9c0f845028184ea08640dd8447a9e30ee5b"
+    ],
+    "contract": "0x5661ABdb46ceB9601c1a4b371990F4f0cB990F91",
+    "deployment": "0xc8253dfb250f8d952a713eb4dc4e254c57537a7f50821363e41f81c73cdb0f3a",
+    "accounts": [
+      "0xa5c7fd9a2c5d4d18c338034e076730869f71a67a",
+      "0x53eba0976933039d4c450b8e16c2e9a41c23ddd6",
+      "0xf99648aa5e772cbbd82d45dba4e2126d4092fe69",
+      "0xb9fb0b34956b832851d001a3e7f7547294928f51"
+    ],
+    "fixture_revision": "b551cd83c7e549b6d2b3fd714c48f94d17b196a7",
+    "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+    "network": "studionet",
+    "chain_id": 61999
+  },
+  {
+    "id": "cardinality",
+    "args": [
+      "moorisi/repair-scope",
+      "cardinality-snapshot",
+      [
+        "asset-amber",
+        "asset-bronze",
+        "asset-copper"
+      ],
+      [
+        "holder-red",
+        "holder-blue"
+      ],
+      [
+        "site-north",
+        "site-south"
+      ],
+      [
+        "record-1",
+        "record-2",
+        "record-3",
+        "record-4",
+        "record-5",
+        "record-6",
+        "record-7"
+      ],
+      "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/cardinality.json",
+      "5665e7b84bb9d8664932156637d69e23ab2559c8a89058022a9316b0d2f2cf55"
+    ],
+    "contract": "0x13cFc89dA81DC157d813f7A3ADF7b7220daf7E08",
+    "deployment": "0xa018c8383cbbc1a400abc8b8b70217308790a7301883d5dfc5fb4264e102167b",
+    "accounts": [
+      "0xa52fe7ea0fa0ac1fa0fcc802654ba6135f5a08d5",
+      "0x9f910bfc731342d46d12b99f16b93ca31bcae499",
+      "0x18c2b76c7fd30230e621c4d8d2fac73faff6918d",
+      "0x48e7131f477bac34b0009cb86278c8ca2806a893"
+    ],
+    "fixture_revision": "b551cd83c7e549b6d2b3fd714c48f94d17b196a7",
+    "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+    "network": "studionet",
+    "chain_id": 61999
+  },
+  {
+    "id": "unresolved",
+    "args": [
+      "moorisi/repair-scope",
+      "unresolved-snapshot",
+      [
+        "asset-amber",
+        "asset-bronze",
+        "asset-copper"
+      ],
+      [
+        "holder-red",
+        "holder-blue"
+      ],
+      [
+        "site-north",
+        "site-south"
+      ],
+      [
+        "record-1",
+        "record-2",
+        "record-3"
+      ],
+      "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json",
+      "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195"
+    ],
+    "contract": "0x1797DDaa393F1ABa72c2230A74c9c35FC0881BDD",
+    "deployment": "0x8cc091fbf93543a1bb6796500b65f498fc6475d7c62c5f838ae2673b8c78be43",
+    "accounts": [
+      "0x0457161e09c84a08f26a9c30e55f967e2c5b19a6",
+      "0xae660afdf608e40b7d2495b9a3129231c9c47664",
+      "0x3eba2dd96e5f9a3f5bee4a0bf4be126626c842d9",
+      "0xa43ab056caa6e36788e3fb157c80f1c81125e642"
+    ],
+    "fixture_revision": "b551cd83c7e549b6d2b3fd714c48f94d17b196a7",
+    "source_sha256": "464ded37aa4232612c0aa555050b1248ff716502f75941b83ccc6d49c18f2aeb",
+    "network": "studionet",
+    "chain_id": 61999
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "answers": [],
+  "assessment": null,
+  "configuration": {
+    "assets": [
+      "asset-amber",
+      "asset-bronze",
+      "asset-copper"
+    ],
+    "holders": [
+      "holder-red",
+      "holder-blue"
+    ],
+    "records": [
+      "record-1",
+      "record-2",
+      "record-3",
+      "record-4"
+    ],
+    "repository": "moorisi/repair-scope",
+    "sha256": "5a32513ec9e1873ae34e26a4fffec9c0f845028184ea08640dd8447a9e30ee5b",
+    "sites": [
+      "site-north",
+      "site-south"
+    ],
+    "snapshot": "correlation-snapshot",
+    "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/correlation.json"
+  },
+  "database": null
+}

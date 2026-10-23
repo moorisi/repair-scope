@@ -1,0 +1,1322 @@
+[
+  {
+    "label": "unresolved-reject-before-compile",
+    "caller": 1,
+    "method": "query",
+    "args": [
+      [
+        [
+          "asset-amber",
+          "?h",
+          "site-north"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Snapshot not compiled",
+    "transaction": "0x2d7cc4384afc92debf341fb80a00ba7754904cff908ed2907e795fa6316d0664",
+    "state_before": {
+      "answers": [],
+      "assessment": null,
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": null
+    },
+    "state": {
+      "answers": [],
+      "assessment": null,
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": null
+    }
+  },
+  {
+    "label": "unresolved-compile",
+    "caller": 2,
+    "method": "compile",
+    "args": [],
+    "transaction": "0x2aafa282145fad48a864b5d3351a61673d2ce2e85c780172c5ab34614bd79e59",
+    "state_before": {
+      "answers": [],
+      "assessment": null,
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": null
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    }
+  },
+  {
+    "label": "unresolved-query-1",
+    "caller": 1,
+    "method": "query",
+    "args": [
+      [
+        [
+          "asset-amber",
+          "?h",
+          "site-north"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Snapshot requires review",
+    "transaction": "0xc7ff267a362adb375f0df8dbfa1163a7c146d9e84de03ed3496f4762ba3b563f",
+    "state_before": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    }
+  },
+  {
+    "label": "unresolved-query-2",
+    "caller": 2,
+    "method": "query",
+    "args": [
+      [
+        [
+          "asset-amber",
+          "?h",
+          "site-north"
+        ],
+        [
+          "asset-bronze",
+          "?h",
+          "site-north"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Snapshot requires review",
+    "transaction": "0x62acf815792929a8bd312483f923a9355316136aafa5f1af11d3e75dc536db90",
+    "state_before": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    }
+  },
+  {
+    "label": "unresolved-query-3",
+    "caller": 3,
+    "method": "query",
+    "args": [
+      [
+        [
+          "?a",
+          "?h",
+          "site-south"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Snapshot requires review",
+    "transaction": "0x1b4d4c6fd8530199fdfae45ba4cb01ab870027a9c12578e4b40c37f076f15163",
+    "state_before": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    }
+  },
+  {
+    "label": "unresolved-reject-repeat-compile",
+    "caller": 0,
+    "method": "compile",
+    "args": [],
+    "error": "[EXPECTED] Snapshot already compiled",
+    "transaction": "0x62ac26038db1deb96f499b7f2a45a02705bc23b0e3ee517d083e273b7093009a",
+    "state_before": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    }
+  },
+  {
+    "label": "unresolved-reject-invalid-query",
+    "caller": 3,
+    "method": "query",
+    "args": [
+      [
+        [
+          "?x",
+          "?x",
+          "site-north"
+        ]
+      ]
+    ],
+    "error": "[EXPECTED] Snapshot requires review",
+    "transaction": "0xcf9e5d0ce6b7e00d84374bbb58e9fbf9bb8c7640e3572c23660029bc9d689271",
+    "state_before": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    },
+    "state": {
+      "answers": [],
+      "assessment": {
+        "observations": {
+          "rows": [
+            {
+              "asset": "asset-amber",
+              "holder": "holder-red",
+              "id": "record-1",
+              "quote": "The final snapshot entry records Amber in Red's custody at the northern depot.",
+              "site": "site-north",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "asset-bronze",
+              "holder": "holder-blue",
+              "id": "record-2",
+              "quote": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective.",
+              "site": "site-south",
+              "status": "ASSERTED"
+            },
+            {
+              "asset": "",
+              "holder": "",
+              "id": "record-3",
+              "quote": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown.",
+              "site": "",
+              "status": "UNKNOWN"
+            }
+          ]
+        },
+        "source": {
+          "records": [
+            {
+              "id": "record-1",
+              "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+            },
+            {
+              "id": "record-2",
+              "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+            },
+            {
+              "id": "record-3",
+              "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+            }
+          ],
+          "snapshot": "unresolved-snapshot"
+        }
+      },
+      "configuration": {
+        "assets": [
+          "asset-amber",
+          "asset-bronze",
+          "asset-copper"
+        ],
+        "holders": [
+          "holder-red",
+          "holder-blue"
+        ],
+        "records": [
+          "record-1",
+          "record-2",
+          "record-3"
+        ],
+        "repository": "moorisi/repair-scope",
+        "sha256": "0a8ca4232107281acc89ba66b3e0dfc0ad2ddf611365d1a01274de1851c9e195",
+        "sites": [
+          "site-north",
+          "site-south"
+        ],
+        "snapshot": "unresolved-snapshot",
+        "url": "https://raw.githubusercontent.com/moorisi/repair-scope/b551cd83c7e549b6d2b3fd714c48f94d17b196a7/fixtures/unresolved.json"
+      },
+      "database": {
+        "certain_facts": [],
+        "facts": [
+          [
+            "asset-amber",
+            "holder-red",
+            "site-north"
+          ],
+          [
+            "asset-bronze",
+            "holder-blue",
+            "site-south"
+          ]
+        ],
+        "maximum_size": -1,
+        "origins": [
+          [
+            "record-1"
+          ],
+          [
+            "record-2"
+          ]
+        ],
+        "repairs": [],
+        "status": "REVIEW",
+        "unknown": [
+          "record-3"
+        ]
+      }
+    }
+  }
+]
