@@ -1,0 +1,23 @@
+[
+  {
+    "id": "record-1",
+    "status": "ASSERTED",
+    "asset": "asset-amber",
+    "holder": "holder-red",
+    "site": "site-north"
+  },
+  {
+    "id": "record-2",
+    "status": "ASSERTED",
+    "asset": "asset-bronze",
+    "holder": "holder-blue",
+    "site": "site-south"
+  },
+  {
+    "id": "record-3",
+    "status": "UNKNOWN",
+    "asset": "",
+    "holder": "",
+    "site": ""
+  }
+]

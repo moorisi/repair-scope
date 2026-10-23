@@ -1,0 +1,21 @@
+{
+  "snapshot": "correlation-snapshot",
+  "records": [
+    {
+      "id": "record-1",
+      "text": "At the snapshot, Amber's custody was with Red at the northern depot. This is the final custody assertion; no later transfer is reported."
+    },
+    {
+      "id": "record-2",
+      "text": "The snapshot entry places Amber under Blue's custody at the northern depot. The report makes this as a current assertion, not a planned destination."
+    },
+    {
+      "id": "record-3",
+      "text": "Bronze was held in custody by Red at the northern depot at the fixed snapshot. This entry has not been withdrawn."
+    },
+    {
+      "id": "record-4",
+      "text": "Blue was the custodian for Bronze at the snapshot, with Bronze located at the northern depot. This is the effective statement."
+    }
+  ]
+}

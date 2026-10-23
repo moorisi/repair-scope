@@ -1,0 +1,17 @@
+{
+  "snapshot": "unresolved-snapshot",
+  "records": [
+    {
+      "id": "record-1",
+      "text": "The final snapshot entry records Amber in Red's custody at the northern depot."
+    },
+    {
+      "id": "record-2",
+      "text": "At the snapshot, Blue held Bronze in custody at the southern depot. This assertion is effective."
+    },
+    {
+      "id": "record-3",
+      "text": "Copper's current custodian is unresolved: the final record gives Red and Blue as conflicting alternatives and supplies no correction. Its custody site at the snapshot is also unknown."
+    }
+  ]
+}

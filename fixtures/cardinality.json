@@ -1,0 +1,33 @@
+{
+  "snapshot": "cardinality-snapshot",
+  "records": [
+    {
+      "id": "record-1",
+      "text": "The final snapshot assertion records Amber in Red's custody at the southern depot."
+    },
+    {
+      "id": "record-2",
+      "text": "At the snapshot, Bronze was in Red's custody at the northern depot. The entry is effective."
+    },
+    {
+      "id": "record-3",
+      "text": "Copper's snapshot custodian was Red; its custody location was the northern depot."
+    },
+    {
+      "id": "record-4",
+      "text": "The effective snapshot entry states that Amber was in Blue's custody at the southern depot."
+    },
+    {
+      "id": "record-5",
+      "text": "A duplicate dispatch note also asserts that Bronze was in Red's custody at the northern depot at the snapshot."
+    },
+    {
+      "id": "record-6",
+      "text": "Withdrawn draft: Copper in Blue's custody at the southern depot. The draft was fully withdrawn before the snapshot; this record makes no effective custody claim."
+    },
+    {
+      "id": "record-7",
+      "text": "Next month's forecast proposes moving Amber into Red's custody at the northern depot. This is solely a future plan, and states no custody at the snapshot."
+    }
+  ]
+}

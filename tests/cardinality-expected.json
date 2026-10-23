@@ -1,0 +1,51 @@
+[
+  {
+    "id": "record-1",
+    "status": "ASSERTED",
+    "asset": "asset-amber",
+    "holder": "holder-red",
+    "site": "site-south"
+  },
+  {
+    "id": "record-2",
+    "status": "ASSERTED",
+    "asset": "asset-bronze",
+    "holder": "holder-red",
+    "site": "site-north"
+  },
+  {
+    "id": "record-3",
+    "status": "ASSERTED",
+    "asset": "asset-copper",
+    "holder": "holder-red",
+    "site": "site-north"
+  },
+  {
+    "id": "record-4",
+    "status": "ASSERTED",
+    "asset": "asset-amber",
+    "holder": "holder-blue",
+    "site": "site-south"
+  },
+  {
+    "id": "record-5",
+    "status": "ASSERTED",
+    "asset": "asset-bronze",
+    "holder": "holder-red",
+    "site": "site-north"
+  },
+  {
+    "id": "record-6",
+    "status": "OMIT",
+    "asset": "",
+    "holder": "",
+    "site": ""
+  },
+  {
+    "id": "record-7",
+    "status": "OMIT",
+    "asset": "",
+    "holder": "",
+    "site": ""
+  }
+]
